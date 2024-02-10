@@ -2,15 +2,68 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    
-    <title>OUR CODE RED GENESIS PROJECT</title>
-    <h1>DATA VISUALIZATION</h1>
-    
-    <h2>country</h2>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <title>Oil and Gas Locations & Sustainability</title>
 </head>
 <body>
-    
+    <nav class="container-fluid">
+        <ul>
+            <li><strong>Company Name</strong></li>
+        </ul>
+        <ul>
+            <li><a href="#locations">Locations</a></li>
+            <li><a href="#sustainability">Sustainability</a></li>
+            <li><a href="#contact" role="button">Contact Us</a></li>
+        </ul>
+    </nav>
+    <main class="container">
+        <div class="grid">
+            <section id="locations">
+                <hgroup>
+                    <h2>Our Locations</h2>
+                    <h3>Exploring Our Global Footprint</h3>
+                </hgroup>
+                <p>Discover our manufacturing locations worldwide, each contributing to the responsible extraction and processing of oil and gas.</p>
+                <figure>
+                    <img src="https://source.unsplash.com/random/800x600?oil-factory" alt="Oil and Gas Factory">
+                    <figcaption><a href="https://unsplash.com/s/photos/oil-factory" target="_blank">Image Source</a></figcaption>
+                </figure>
+                <!-- Additional location details here -->
+            </section>
+
+            <section id="sustainability">
+                <hgroup>
+                    <h2>Sustainability Efforts</h2>
+                    <h3>Commitment to the Environment</h3>
+                </hgroup>
+                <p>Learn about our sustainability measures ensuring environmental safety and social responsibility.</p>
+                <!-- Sustainability details here -->
+            </section>
+        </div>
+    </main>
+
+    <section aria-label="Subscribe example">
+        <div class="container">
+            <article>
+                <hgroup>
+                    <h2>Stay Updated</h2>
+                    <h3>Subscribe to Our Newsletter</h3>
+                </hgroup>
+                <form class="grid">
+                    <input type="text" id="firstname" name="firstname" placeholder="Your Name" aria-label="Your Name" required>
+                    <input type="email" id="email" name="email" placeholder="Your Email" aria-label="Your Email" required>
+                    <button type="submit" onclick="event.preventDefault()">Subscribe</button>
+                </form>
+            </article>
+        </div>
+    </section>
+
+    <footer class="container">
+        <small>
+            <a href="#privacy">Privacy Policy</a> • 
+            <a href="#terms">Terms of Use</a>
+        </small>
+    </footer>
 </body>
 </html>
