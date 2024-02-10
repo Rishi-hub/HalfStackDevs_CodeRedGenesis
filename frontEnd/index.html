@@ -4,71 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="style.css">
     <title>Sustainability Tracking</title>
-    <style>
-        .location-card {
-            border: 1px solid #ccc;
-            padding: 10px;
-            margin-bottom: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            text-decoration: none;
-            color: inherit;
-        }
-        .location-card:hover {
-            background-color: #f0f0f0;
-        }
-    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.location-card').forEach(card => {
+                card.addEventListener('click', function () {
+                    this.classList.toggle('active');
+                });
+            });
+        });
+    </script>
 </head>
 <body>
     <nav class="container-fluid">
         <ul>
-            <li><strong>Company Name</strong></li>
+            <li><strong>ConocoPhillips</strong></li>
         </ul>
         <ul>
             <li><a href="#about">About Us</a></li>
-            <li><a href="#locations">Locations</a></li>
-            <li><a href="#contact" role="button">Contact Us</a></li>
         </ul>
     </nav>
-
     <main class="container">
         <section id="about">
-            <h2>About Us</h2>
-            <p>We are dedicated to tracking and improving the sustainability of our company's manufacturing locations worldwide.</p>
+            <h2>About ConocoPhillips</h2>
+            <p>Welcome to ConocoPhillips' sustainability tracking page. We are devoted to monitoring and improving the environmental impact of our global operations.</p>
         </section>
-
         <section id="locations">
-            <h2>Our Locations Ranked by Sustainability</h2>
+            <h2>Our Locations</h2>
             <div class="location-list">
-                <!-- Example of a location -->
-                <a href="locationtemplate1.html" class="location-card">
-                    <span>Location 1</span>
-                    <span>City, Country</span>
-                    <span>Score: 95/100</span>
-                </a>
-                <!-- Second location -->
-                <a href="locationtemplate1.html" class="location-card">
-                    <span>Location 2</span>
-                    <span>City, Country</span>
-                    <span>Score: 92/100</span>
-                </a>
-                <!-- Third location -->
-                <a href="locationtemplate1.html" class="location-card">
-                    <span>Location 3</span>
-                    <span>City, Country</span>
-                    <span>Score: 89/100</span>
-                </a>
+                <!-- Sample Location 1 -->
+                <div class="location-card" tabindex="0">
+                    <div class="card-header">
+                        <span>Alaska</span>
+                        <span>Score: 85%</span>
+                    </div>
+                    <div class="card-details">
+                        <p>Acreage: 2M acres</p>
+                        <p>Oil Production: 0.5M barrels/day</p>
+                        <p>Known Oil Reserves: 3B barrels</p>
+                        <p>Capital Expenditures: $1.2B</p>
+                    </div>
+                </div>
+                <!-- Sample Location 2 -->
+                <div class="location-card" tabindex="0">
+                    <div class="card-header">
+                        <span>Texas</span>
+                        <span>Score: 78%</span>
+                    </div>
+                    <div class="card-details">
+                        <p>Acreage: 1.5M acres</p>
+                        <p>Oil Production: 1M barrels/day</p>
+                        <p>Known Oil Reserves: 2.5B barrels</p>
+                        <p>Capital Expenditures: $900M</p>
+                    </div>
+                </div>
+                <!-- Sample Location 3 -->
+                <div class="location-card" tabindex="0">
+                    <div class="card-header">
+                        <span>North Sea</span>
+                        <span>Score: 82%</span>
+                    </div>
+                    <div class="card-details">
+                        <p>Acreage: 3M acres</p>
+                        <p>Oil Production: 0.7M barrels/day</p>
+                        <p>Known Oil Reserves: 4B barrels</p>
+                        <p>Capital Expenditures: $1.5B</p>
+                    </div>
+                </div>
+                <!-- Sample Location 4 -->
+                <div class="location-card" tabindex="0">
+                    <div class="card-header">
+                        <span>Norway</span>
+                        <span>Score: 91%</span>
+                    </div>
+                    <div class="card-details">
+                        <p>Acreage: 2.2M acres</p>
+                        <p>Oil Production: 0.6M barrels/day</p>
+                        <p>Known Oil Reserves: 3.5B barrels</p>
+                        <p>Capital Expenditures: $1.1B</p>
+                    </div>
+                </div>
+                <!-- Sample Location 5 -->
+                <div class="location-card" tabindex="0">
+                    <div class="card-header">
+                        <span>Canada</span>
+                        <span>Score: 89%</span>
+                    </div>
+                    <div class="card-details">
+                        <p>Acreage: 2.8M acres</p>
+                        <p>Oil Production: 0.8M barrels/day</p>
+                        <p>Known Oil Reserves: 5B barrels</p>
+                        <p>Capital Expenditures: $1.3B</p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
-
     <footer class="container">
-        <small>
-            <a href="#privacy">Privacy Policy</a> • 
-            <a href="#terms">Terms of Use</a>
-        </small>
+        <small><a href="#">Privacy Policy</a> • <a href="#">Terms of Use</a></small>
     </footer>
 </body>
 </html>
