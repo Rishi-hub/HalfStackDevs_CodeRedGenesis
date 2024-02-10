@@ -4,40 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="style.css">
     <title>Sustainability Tracking</title>
-    <style>
-        .location-card {
-            border: 1px solid #ccc;
-            padding: 10px;
-            margin-bottom: 10px;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            text-decoration: none;
-            color: inherit;
-            cursor: pointer;
-        }
-        .location-card:hover {
-            background-color: #f0f0f0;
-        }
-        .card-header {
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-        }
-        .card-details {
-            display: none;
-            background-color: #e6f7ff;
-            padding: 10px;
-            margin-top: 10px;
-            display: flex;
-            justify-content: space-around;
-            width: 100%;
-        }
-        .location-card:focus-within .card-details, .location-card.active .card-details {
-            display: flex;
-        }
-    </style>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             document.querySelectorAll('.location-card').forEach(card => {
