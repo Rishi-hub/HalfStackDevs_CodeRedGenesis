@@ -35,6 +35,9 @@ h3 {
     padding-right: 50px;
     padding-top: 10px;
 }
+p{
+    font-size: 20px;
+}
 body {
     background-color: var(--main-color);
     color: var(--text--color); /* Set the background color to white */
@@ -128,7 +131,7 @@ article{
     width: auto;
     height: 10vh;
     float: right;
-
+    padding-right: 20px;
 }
 #map {
     height: 500px;
