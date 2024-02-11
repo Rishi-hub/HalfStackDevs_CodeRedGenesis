@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <title>Sustainability Tracking</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.location-card').forEach(card => {
+                card.addEventListener('click', function () {
+                    this.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <nav class="container-fluid">
+        <ul>
+            <li><strong>ConocoPhillips Tracker</strong></li>
+        </ul>
+        <ul>
+            <li><a href="#about">About Us</a></li>
+        </ul>
+    </nav>
+    <main class="container">
+        <section id="about">
+            <h2>About ConocoPhillips</h2>
+            <p>Welcome to ConocoPhillips' sustainability tracking page. We are devoted to monitoring and improving the environmental impact of our global operations.</p>
+        </section>
+        <section id="locations">
+            <h2>Our Locations</h2>
+            <div class="location-list">
+                <details class="location-card" tabindex="0">
+                        <summary>
+                                <span>Alaska</span>
+                                <span>Score: 85%</span>
+                        </summary>
+                        <span style="color:rgb(0, 0, 0);font-size:18px;">Acreage: 2 million acres Oil Production: 0.5 million barrels/day Known Oil Reserves: 3 billion barrels Capital Expenditures: $1.2 billion</span>
+                    </details>
+                <!-- Add more locations as needed -->
+                <details class="location-card" tabindex="0">
+                    <summary>
+                            <span>Middle East</span>
+                            <span>Score: 85%</span>
+                    </summary>
+                    <span style="color:rgb(0, 0, 0);font-size:18px;">Acreage: 2 million acres Oil Production: 0.5 million barrels/day Known Oil Reserves: 3 billion barrels Capital Expenditures: $1.2 billion</span>
+                </details>
+                <details class="location-card" tabindex="0">
+                    <summary>
+                            <span>Europe</span>
+                            <span>Score: 85%</span>
+                    </summary>
+                    <span style="color:rgb(0, 0, 0);font-size:18px;">Acreage: 2 million acres Oil Production: 0.5 million barrels/day Known Oil Reserves: 3 billion barrels Capital Expenditures: $1.2 billion</span>
+                </details>
+                <details class="location-card" tabindex="0">
+                    <summary>
+                            <span>Southeast Asia</span>
+                            <span>Score: 85%</span>
+                    </summary>
+                    <span style="color:rgb(0, 0, 0);font-size:18px;">Acreage: 2 million acres Oil Production: 0.5 million barrels/day Known Oil Reserves: 3 billion barrels Capital Expenditures: $1.2 billion</span>
+                </details>
+
+            </div>
+        </section>
+        <section aria-label="Subscribe example">
+            <div class="container">
+                <article>
+                    <h2>Form was unable to submit correctly...</h2>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer class="container">
+        <small><a href="#">Privacy Policy</a> • <a href="#">Terms of Use</a></small>
+    </footer>
+</body>
+</html>
