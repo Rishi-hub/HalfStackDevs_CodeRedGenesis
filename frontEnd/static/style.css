@@ -30,7 +30,9 @@ h2,p,h3{
     justify-content: left;
     color: black;
 }
-
+h3 {
+    padding: 50px;
+}
 body {
     background-color: var(--main-color);
     color: var(--text--color); /* Set the background color to white */
