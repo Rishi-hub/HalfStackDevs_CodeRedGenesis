@@ -3,7 +3,9 @@
     --text--color: black;
     --secondary-color: #002366;
 }
-
+.h2{
+    color: black;
+}
 body {
     background-color: var(--main-color);
     color: var(--text--color); /* Set the background color to white */
