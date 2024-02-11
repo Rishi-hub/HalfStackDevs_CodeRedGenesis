@@ -120,7 +120,7 @@ article{
     width: auto;
     height: 10vh;
     float: right;
-  
+
 }
 #map {
     height: 500px;
@@ -142,7 +142,17 @@ canvas {
 .pie-graphs{
     display: inline;
     padding: 10px;
-    
+}
+.content {
+    place-items: center;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.content p {
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+
 }
 
 strong {
