@@ -1,3 +1,27 @@
-steps:
-- name: 'gcr.io/cloud-builders/gcloud'
-  args: ['app', 'deploy']
+runtime: python311  # Specify the runtime environment, e.g., Python 3.9
+env: standard  # Use the standard environment
+instance_class: F1  # Choose an instance class
+
+# [Optional] Configure automatic scaling settings
+automatic_scaling:
+  target_cpu_utilization: 0.6
+  min_instances: 1
+  max_instances: 5
+
+# [Optional] Define network settings
+network:
+  forwarded_ports:
+    - "5000"
+  instance_tag: "example-tag"
+
+# [Optional] Specify service account settings
+# service_account: "your-service-account-id@appspot.gserviceaccount.com"
+
+# [Optional] Define environment variables
+env_variables:
+  ENV_VAR_NAME: "value"
+
+# [Optional] Configure handlers
+handlers:
+- url: /.*
+  script: auto
