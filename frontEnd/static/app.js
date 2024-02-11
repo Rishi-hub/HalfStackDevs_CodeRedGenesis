@@ -213,15 +213,19 @@ document.addEventListener('DOMContentLoaded', function () { //This section waits
   });
 });
 
-let d = [];
-for (let i = 0; i < 6; ++i) {
-  d[i] = document.getElementById('d' + JSON.stringify(i));
 
-  d[i].addEventListener('click', function () {
-    if (d[i].open) {
-      d[i].removeAttribute('open');
-    } else {
-      d[i].setAttribute('open', 'open');
-    }
-  });
-}
+document.addEventListener('DOMContentLoaded', function () {
+  let d = [];
+  for (let i = 0; i < 6; ++i) {
+    d[i] = document.getElementById('d' + JSON.stringify(i));
+
+    d[i].addEventListener('click', function (event) {
+      event.preventDefault();
+      if (d[i].open) {
+        d[i].removeAttribute('open');
+      } else {
+        d[i].setAttribute('open', 'open');
+      }
+    });
+  }
+});
