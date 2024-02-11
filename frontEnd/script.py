@@ -81,6 +81,11 @@ def index():
     return render_template("index.html")
 
 
+@app.route('/about-us')
+def about_us():
+    return render_template("aboutUs.html")
+
+
 @app.route('/submit-form', methods=['POST'])
 def submit_form():
     first_name = request.form['firstname']
