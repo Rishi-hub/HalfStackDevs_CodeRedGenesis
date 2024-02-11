@@ -29,7 +29,7 @@ new Chart("water", {
 
 
 
-    
+
     options: {
       title: {
         display: true,
@@ -44,7 +44,8 @@ new Chart("water", {
             });
             var currentValue = dataset.data[tooltipItem.index];
             var percentage = Math.round((currentValue / total) * 100);
-            return `${data.labels[tooltipItem.index]}: ${currentValue} (${percentage}%)`;
+            return `${data.labels[tooltipItem.index]}: ${percentage})`;
+            //${currentValue}
           }
         }
     }
