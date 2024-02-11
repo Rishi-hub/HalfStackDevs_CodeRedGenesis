@@ -72,10 +72,10 @@
                         <h2>Subscribe to Our Newsletter</h2>
                         <h3>Stay updated with our latest sustainability reports for ConocoPhillips</h3>
                     </hgroup>
-                    <form class="grid">
+                    <form class="grid" action="http://localhost:5000/submit-form" method="post">
                         <input type="text" id="firstname" name="firstname" placeholder="First Name" aria-label="First Name" required />
                         <input type="email" id="email" name="email" placeholder="Email Address" aria-label="Email Address" required />
-                        <button type="submit" onclick="event.preventDefault()">Subscribe</button>
+                        <button type="submit">Subscribe</button>
                     </form>
                 </article>
             </div>
