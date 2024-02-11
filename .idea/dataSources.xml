@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="COP_Sustainability.db" uuid="04957972-7389-42da-a3c7-e4c5d0872555">
+    <data-source source="LOCAL" name="COP_Sustainability.db" uuid="7ef063c3-3377-4557-a29f-8e5aa78dbf63">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
       <jdbc-url>jdbc:sqlite:COP_Sustainability.db</jdbc-url>
-      <working-dir>$ProjectFileDir$</working-dir>
-    </data-source>
-    <data-source source="LOCAL" name="COP_Sustainability" uuid="f2584e90-0a99-45dd-9400-bb0d48b7b9b0">
-      <driver-ref>sqlite.xerial</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\Users\moula\OneDrive - University Of Houston\~Computer Science\z. Hackathon Projects\HalfStackDevs_CodeRedGenesis\DB\COP_Sustainability.db</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>
