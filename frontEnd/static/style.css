@@ -137,3 +137,12 @@ canvas {
 .pie-graphs{
     display: inline;
 }
+.content {
+    place-items: center;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.content p {
+    text-align: center;
+    width: 100%;
+}
