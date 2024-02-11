@@ -1,11 +1,13 @@
 import string
-from flask import Flask, request, render_template, redirect
+from flask import Flask, request, render_template
 import sqlite3
 import random
 import emailing
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = "".join(random.choice(string.ascii_letters + string.digits) for _ in range(100))
+app.jinja_env.auto_reload = True
+app.config['TEMPLATES_AUTO_RELOAD'] = True
 
 
 DB_path = "../DB/COP_Sustainability.db"
@@ -76,7 +78,7 @@ def handle_data():
     return render_template("submitted.html")
 
 
-@app.route('/remove_from_mailing_list', methods=['POST'])
+#@app.route('/remove-from-mailing-list', methods=['POST'])
 def handle_data():
     email = request.form['email']
 
