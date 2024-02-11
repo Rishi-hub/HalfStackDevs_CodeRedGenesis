@@ -44,7 +44,7 @@ def goodbye_email(email):
 
 def regular_emails():
     subject = "Did you know..."
-    body = "Hi {},\n\nDid you know, in 2022 alone, Conico Phillips released 10000 tonnes of hydrocarbons into the atmosphere.\n\nThank you for the time you spent supporting our mission,\nCOP Sustainability Tracker Team"
+    body = "Hi {},\n\nDid you know, in 2022 alone, Conico Phillips released 10000 tonnes of hydrocarbons into the atmosphere.\n\nHave a good week and see you again soon,\nCOP Sustainability Tracker Team"
 
     with sqlite3.connect(DB_path) as conn:
         c = conn.cursor()
