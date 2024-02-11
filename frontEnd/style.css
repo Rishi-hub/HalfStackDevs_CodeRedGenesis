@@ -40,6 +40,7 @@ body {
 }
 
 .location-card {
+    position: relative;
     border: 1px solid #ccc;
     padding: 10px;
     margin-bottom: 10px;
@@ -57,6 +58,12 @@ body {
     display: flex;
     justify-content: space-between;
     width: 100%;
+}
+.card-header span:last-child{
+    position: absolute;
+    right: 30px;
+    top: 10px;
+
 }
 .card-details {
     display: none;
