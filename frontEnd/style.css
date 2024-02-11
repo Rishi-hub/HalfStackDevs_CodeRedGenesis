@@ -97,3 +97,9 @@ body {
 .location-card:focus-within .card-details, .location-card.active .card-details {
     display: flex;
 }
+
+    .halfstack {
+        width: 30vw;
+        height: 30vh;
+        align-self: center;
+    }
