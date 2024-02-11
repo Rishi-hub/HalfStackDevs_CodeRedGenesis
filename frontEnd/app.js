@@ -26,6 +26,10 @@ new Chart("water", {
         data: waterYValues
       }]
     },
+
+
+
+    
     options: {
       title: {
         display: true,

@@ -19,9 +19,9 @@ def confirmation_email(email):
         c = conn.cursor()
         c.execute(f"SELECT name FROM EmailList WHERE email = '{email}'")
 
-        recipient_row = c.fetchall()
+        recipient = c.fetchall()[0][0]
 
-    emailing.email(email, subject, body.format(recipient_row[0]))
+    emailing.email(email, subject, body.format(recipient))
 
 
 def insert_recipient(first_name, email):
@@ -43,12 +43,14 @@ def handle_data():
 
     try:
         insert_recipient(first_name, email)
-    except:
+    except Exception as e:
+        print(e)
         return render_template("repeat_submission.html")
 
     try:
         confirmation_email(email)
-    except:
+    except Exception as e:
+        print(e)
         return render_template("failed_submission.html")
 
     return render_template("submitted.html")
