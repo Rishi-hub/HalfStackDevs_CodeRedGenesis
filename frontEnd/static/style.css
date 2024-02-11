@@ -44,7 +44,7 @@ body {
     place-items: center;
     padding: 20px;
 }
-.container-fluid{
+.container-fluid, footer{
     background-color: var(--secondary-color);
     width: 100%;
     height: 15vh;
@@ -52,6 +52,7 @@ body {
     display:block;
     margin:0 auto;
     padding:20px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 .clickableImages{
     width: auto;
@@ -76,6 +77,7 @@ body {
     cursor: pointer;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
+
 .location-card ol {
     width: 80%;
 }
