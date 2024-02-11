@@ -35,20 +35,21 @@ new Chart("water", {
         display: true,
         text: "Water usage"
       },
-      //tooltips: {
-     //   callbacks: {
-       //   label: function(tooltipItem, data) {
-       //     var dataset = data.datasets[tooltipItem.datasetIndex];
-       //     var total = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
-       //       return previousValue + currentValue;
-       //     });
-       //     var currentValue = dataset.data[tooltipItem.index];
-       //     var percentage = Math.round((currentValue / total) * 100);
-       //     return `${data.labels[tooltipItem.index]}: ${percentage})`;
-            //${currentValue}
-       //   }
-       // }
-   // }
+
+      tooltips: {
+        callbacks: {
+          label: function(tooltipItem, data) {
+            var dataset = data.datasets[tooltipItem.datasetIndex];
+            var total = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
+              return previousValue + currentValue;
+            });
+            var currentValue = dataset.data[tooltipItem.index];
+            var percentage = Math.round((currentValue / total) * 100);
+            return `${data.labels[tooltipItem.index]}: ${percentage})`;
+          }
+        }
+    }
+
     }
   });
 

@@ -3,7 +3,7 @@
     --text--color: black;
     --secondary-color: #002366;
 }
-h2,p{
+h2,p,h3{
     justify-content: left;
     color: black;
 }
