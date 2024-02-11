@@ -99,6 +99,10 @@ body {
 article{
     background-color: var(--main-color);
 }
+#map {
+    height: 500px;
+    width: 100%;
+  }
 li {
     font-weight: bold;
     font-size: large;
