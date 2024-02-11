@@ -225,6 +225,11 @@ document.addEventListener('DOMContentLoaded', function () {
         d[i].removeAttribute('open');
       } else {
         d[i].setAttribute('open', 'open');
+        for (let j = 0; j < 6; ++j) {
+          if (i === j) continue;
+          d[j].removeAttribute('open');
+        }
+        window.location.href = "#d" + JSON.stringify(i);
       }
     });
   }
