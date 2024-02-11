@@ -1,6 +1,43 @@
 body {
     background-color: #fff; /* Set the background color to white */
 }
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.image-container img {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.dropdown {
+   
+    position: absolute;
+    background-color: #591515;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content {
+    display: none;
+    position: relative;
+    flex-direction: column;
+}
+
+.dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+}
 
 .location-card {
     border: 1px solid #ccc;
