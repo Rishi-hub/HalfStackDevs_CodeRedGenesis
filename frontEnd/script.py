@@ -43,12 +43,14 @@ def handle_data():
 
     try:
         insert_recipient(first_name, email)
-    except:
+    except Exception as e:
+        print(e)
         return render_template("repeat_submission.html")
 
     try:
         confirmation_email(email)
-    except:
+    except Exception as e:
+        print(e)
         return render_template("failed_submission.html")
 
     return render_template("submitted.html")
