@@ -1,9 +1,9 @@
-from flask import Flask, request
+from flask import Flask, request, render_template
 import sqlite3
 
 app = Flask(__name__)
 
-DB_path = "../../DB/COP_Sustainability.db"
+DB_path = "../DB/COP_Sustainability.db"
 
 
 def insert_recipient(first_name, email):
@@ -11,6 +11,11 @@ def insert_recipient(first_name, email):
         c = conn.cursor()
         c.execute(f"INSERT INTO EmailList (name, email) VALUES ('{first_name}', '{email}')")
         conn.commit()
+
+
+@app.route('/')
+def index():
+    return render_template("index.html")
 
 
 @app.route('/submit-form', methods=['POST'])
