@@ -84,6 +84,8 @@ body {
 
 .location-card ol {
     width: 80%;
+    
+    
 }
 .location-card:hover {
     border-color: #2d2d2d;
@@ -91,6 +93,7 @@ body {
 }
 .location-card:active {
     background-color: #e3e2cd;
+
 }
 details[open] {
     border-style: solid;
@@ -130,7 +133,7 @@ article{
 }
 .halfstack{
     width: auto;
-    height: 10vh;
+    height: 12vh;
     float: right;
     padding-right: 20px;
 }
