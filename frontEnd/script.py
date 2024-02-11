@@ -76,7 +76,7 @@ def handle_data():
     return render_template("submitted.html")
 
 
-@app.route('/remove_from_mailing_list', methods=['POST'])
+#@app.route('/remove_from_mailing_list', methods=['POST'])
 def handle_data():
     email = request.form['email']
 
