@@ -28,7 +28,7 @@ def handle_data():
 
     insert_recipient(first_name, email)
 
-    return redirect("/")
+    return render_template("submitted.html")
 
 
 if __name__ == '__main__':
