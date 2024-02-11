@@ -6,6 +6,7 @@ import random
 app = Flask(__name__)
 app.config['SECRET_KEY'] = "".join(random.choice(string.ascii_letters + string.digits) for _ in range(100))
 
+
 DB_path = "../DB/COP_Sustainability.db"
 
 
