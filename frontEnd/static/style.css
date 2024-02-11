@@ -2,6 +2,29 @@
     --main-color: #FFFDE4;
     --text--color: black;
     --secondary-color: #002366;
+    --font-family: system-ui,-apple-system,"Segoe UI","Roboto","Ubuntu","Cantarell","Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --line-height: 1.5;
+    --font-weight: 400;
+    --font-size: 16px;
+    --border-radius: 0.25rem;
+    --border-width: 1px;
+    --outline-width: 3px;
+    --spacing: 1rem;
+    --typography-spacing-vertical: 1.5rem;
+    --block-spacing-vertical: calc(var(--spacing) * 2);
+    --block-spacing-horizontal: var(--spacing);
+    --grid-spacing-vertical: 0;
+    --grid-spacing-horizontal: var(--spacing);
+    --form-element-spacing-vertical: 0.75rem;
+    --form-element-spacing-horizontal: 1rem;
+    --nav-element-spacing-vertical: 1rem;
+    --nav-element-spacing-horizontal: 0.5rem;
+    --nav-link-spacing-vertical: 0.5rem;
+    --nav-link-spacing-horizontal: 0.5rem;
+    --form-label-font-weight: var(--font-weight);
+    --transition: 0.2s ease-in-out;
+    --modal-overlay-backdrop-filter: blur(0.25rem);
+    --card-box-shadow: 0.0145rem 0.029rem 0.174rem rgba(0, 0, 0, 0.01698),0.0335rem 0.067rem 0.402rem rgba(0, 0, 0, 0.024),0.0625rem 0.125rem 0.75rem rgba(0, 0, 0, 0.03),0.1125rem 0.225rem 1.35rem rgba(0, 0, 0, 0.036),0.2085rem 0.417rem 2.502rem rgba(0, 0, 0, 0.04302),0.5rem 1rem 6rem rgba(0, 0, 0, 0.06),0 0 0 0.0625rem rgba(0, 0, 0, 0.015);
 }
 h2,p,h3{
     justify-content: left;
@@ -11,23 +34,14 @@ h2,p,h3{
 body {
     background-color: var(--main-color);
     color: var(--text--color); /* Set the background color to white */
+    place-items: center;
 }
 .container {
-    color: var(--text--color);
+    place-items: center;
+    padding: 20px;
 }
 .container-fluid{
     background-color: var(--secondary-color);
-}
-.image-container {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.image-container img {
-    width: 100px;
-    height: 100px;
-    margin: 5px;
-    cursor: pointer;
 }
 .clickableImages{
     width: auto;
@@ -42,68 +56,59 @@ body {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
-
-.dropdown-content {
-    display: none;
-    position: relative;
-    flex-direction: column;
-}
-
-.dropdown-content a {
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    cursor: pointer;
-}
-
-.dropdown:hover .dropdown-content {
-    display: flex;
-}
-
 .location-card {
     position: relative;
     border: 1px solid #ccc;
-    padding: 10px;
-    margin-bottom: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-decoration: none;
+    margin: 15px;
+    display: grid;
+    place-items: center;
     cursor: pointer;
+}
+.location-card ol {
+    width: 80%;
 }
 .location-card:hover {
     background-color: #f0f0f0;
 }
 .card {
+    padding-top: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: right;
+}
+.card h2 {
+    float: left;
     width: 100%;
+    margin-bottom: -1%;
 }
 .card span:last-child{
-    position: absolute;
+    position: relative;
     right: 10px;
     top: 10px;
     justify-content: right;
 }
-.card-details {
-    display: none;
-    background-color: #e6f7ff;
-    padding: 10px;
-    margin-top: 10px;
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-}
 .location-card:focus-within .card-details, .location-card.active .card-details {
     display: flex;
-}
-
-.halfstack {
-        width: 30vw;
-        height: 30vh;
-        align-self: center;
 }
 .moredata{
     background-color: var(--secondary-color);
     color:var(--main-color)
+}
+article{
+    background-color: var(--main-color);
+}
+li {
+    font-weight: bold;
+    font-size: large;
+    color: darkgreen;
+}
+section {
+    place-items: center;
+}
+canvas {
+    width: 20%;
+    max-width: 700px;
+    height: auto;
 }

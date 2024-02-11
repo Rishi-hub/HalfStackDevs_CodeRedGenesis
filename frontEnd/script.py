@@ -43,8 +43,31 @@ def goodbye_email(email):
 
 
 def regular_emails():
-    subject = "Did you know..."
-    body = "Hi {},\n\nDid you know, in 2022 alone, Conico Phillips released 10000 tonnes of hydrocarbons into the atmosphere.\n\nThank you for the time you spent supporting our mission,\nCOP Sustainability Tracker Team"
+    subject = "Leading the Charge: ConicoPhillips' Global Sustainability Endeavor"
+    body = """Hello {},
+    
+At ConicoPhillips, we recognize the critical importance of environmental stewardship and are deeply committed to minimizing our ecological footprint while maximizing our positive impact on the communities we serve. It's not just a responsibility; it's a fundamental part of who we are.
+
+With this ethos guiding our actions, I'm thrilled to inform you that ConicoPhillips is embarking on a bold journey to expand our sustainability efforts worldwide. This initiative underscores our dedication to creating a brighter, more sustainable future for generations to come.
+
+Here's a glimpse into some of the key aspects of our sustainability expansion:
+
+1. Renewable Energy Investment: ConicoPhillips is ramping up its investments in renewable energy sources, such as solar and wind power, to reduce our reliance on fossil fuels and accelerate the transition to a low-carbon economy.
+
+2. Emissions Reduction Targets: We have set ambitious targets to reduce greenhouse gas emissions across our operations, employing innovative technologies and practices to achieve these goals while maintaining operational excellence.
+
+3. Community Engagement: Building strong, resilient communities is at the heart of our sustainability efforts. Through partnerships and community engagement initiatives, we are working collaboratively to address social and environmental challenges, promoting economic empowerment and social equity.
+
+4. Environmental Conservation: ConicoPhillips is actively engaged in conservation efforts to protect biodiversity and preserve natural habitats. From reforestation projects to marine conservation initiatives, we are committed to safeguarding our planet's precious ecosystems.
+
+5. Transparency and Accountability: We believe in transparency and accountability as essential pillars of sustainability. That's why we are committed to regularly reporting on our progress, engaging with stakeholders, and continuously improving our sustainability practices.
+
+As we embark on this journey, we recognize that achieving our sustainability goals will require dedication, innovation, and collaboration. We are proud to lead the charge towards a more sustainable future and invite you to join us on this transformative journey.
+
+Together, we can make a meaningful difference and create a world where people and the planet thrive harmoniously.
+
+Thank you for your continued support and partnership,
+COP Sustainability Tracker Team"""
 
     with sqlite3.connect(DB_path) as conn:
         c = conn.cursor()

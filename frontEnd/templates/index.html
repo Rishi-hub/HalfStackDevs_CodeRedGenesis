@@ -13,7 +13,7 @@
 <body>
     <nav class="container-fluid">
         <ul>
-            <li><strong>ConocoPhillips</strong></li>
+            <li><a style="font-weight: lighter;" href="/">COP Sustainability</a></li>
         </ul>
         <ul>
             <li><a href="\about-us">About Us</a></li>
@@ -25,24 +25,34 @@
             <p>Welcome to ConocoPhillips' sustainability tracking page. We are devoted to monitoring and improving the environmental impact of our global operations.</p>
         </section>
         
-        
         <section id="locations">
-            <h2>Sustainability Categories</h2>
             <div class="location-list">
                 <details class="location-card" tabindex="0">
                     <summary class = "card">
-                            <h2>Energy</h2>
-                            <img src="../photos/light bulb.jpg" alt="Snow" class = "clickableImages" onclick="imageClicked('Water')">
+                            <h2>Sustainability Scores</h2>
+                            <img src="../static/photos/cloud.png" alt="Snow" class = "clickableImages" onclick="imageClicked('Water')">
                     </summary>
-                    <canvas id="energy" style="width:100%;max-width:700px"></canvas>
+                    <ol class="container">
+                        <li>Asia Pacific<span style="float: right;">89</span></li>
+                        <li>Europe / Middle East<span style="float: right;">61</span></li>
+                        <li>U.S.A.<span style="float: right;">32</span></li>
+                        <li>Canada<span style="float: right;">25</span></li>
+                    </ol>
+                </details>
+                <details class="location-card" tabindex="0">
+                    <summary class = "card">
+                            <h2>Energy</h2>
+                            <img src="../static/photos/light bulb.png" alt="Snow" class = "clickableImages" onclick="imageClicked('Water')">
+                    </summary>
+                    <canvas id="energy"></canvas>
                     <button class = "moredata" id="generateChartButton">More Data?</button>
                 </details>
                 <details class="location-card" tabindex="0">
                     <summary class = "card">
                             <h2>Oil Spills</h2>
-                            <img src="../static/photos/oil spills.jpg" alt="Mountains" class = "clickableImages" onclick="imageClicked('GreenHouseEmissions')">
+                            <img src="../static/photos/oil spills.png" alt="Mountains" class = "clickableImages" onclick="imageClicked('GreenHouseEmissions')">
                     </summary>
-                    <canvas id="oilSpills" style="width:100%;max-width:700px"></canvas>
+                    <canvas id="oilSpills"></canvas>
                     <button class = "moredata" id="generateChartButton">More Data?</button>
                 </details>
                 <details class="location-card" tabindex="0">
@@ -51,30 +61,30 @@
                                 <img src="../static/photos/water.png" alt="Snow" class = "clickableImages" onclick="imageClicked('Water')">
                         </summary>
                         <span style="color:rgb(0, 0, 0);font-size:18px;">Water usage per country</span>
-                        <canvas id="water" style="width:100%;max-width:700px"></canvas>
+                        <canvas id="water"></canvas>
                         <button class = "moredata" id="generateChartButton">More Data?</button>
                     </details>
                 <!-- Add more locations as needed -->
                 <details class="location-card" tabindex="0">
                     <summary class = "card">
                             <h2>Waste Production</h2>
-                            <img src="../static/photos/recycle.jpg" alt="Forest" class = "clickableImages" onclick="imageClicked('GreenHouseEmissions')">
+                            <img src="../static/photos/recycle.png" alt="Forest" class = "clickableImages" onclick="imageClicked('GreenHouseEmissions')">
                     </summary>
-                    <canvas id="waste" style="width:100%;max-width:700px"></canvas>
+                    <canvas id="waste"></canvas>
                     <button class = "moredata" id="generateChartButton">More Data?</button>
                 </details>
                 <details class="location-card" tabindex="0">
                     <summary class = "card">
                             <h2>Green House Emissions</h2>
-                            <img src="../static/photos/green house emissions.jpg" alt="Mountains" class = "clickableImages" onclick="imageClicked('GreenHouseEmissions')">
+                            <img src="../static/photos/green house emissions.png" alt="Mountains" class = "clickableImages" onclick="imageClicked('GreenHouseEmissions')">
                     </summary>
                     <canvas id="GreenHouseEmissions" style="width:100%;max-width:700px"></canvas>
                     <button class = "moredata" id="generateChartButton">More Data?</button>
                 </details>
             </div>
             </section>
-            <section aria-label="Subscribe example">
-                <div class="container">
+            <section  aria-label="Subscribe example">
+                <div class = "emailList" class="container">
                     <article>
                         <h2>Please join our mailing list to receive regular updates about COP sustainability:</h2>
                         <form class="grid" action="/submit-form" method="post"> <!-- /submit-form is localhost -->
