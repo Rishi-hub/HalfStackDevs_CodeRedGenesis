@@ -109,7 +109,7 @@ def remove_from_mailing_list():
         goodbye_email(email)
     except Exception as e:
         print(e)
-        return render_template("failed_submission.html")
+        return render_template("failed_not_in_list.html")
 
     try:
         remove_recipient(email)
