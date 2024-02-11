@@ -21,7 +21,7 @@
     </nav>
     <main class="container">
         <section id="about">
-            <h2>About ConocoPhillips</h2>
+            <h2>About COP Sustainability</h2>
             <p>Welcome to ConocoPhillips' sustainability tracking page. We are devoted to monitoring and improving the environmental impact of our global operations.</p>
         </section>
         
@@ -40,7 +40,8 @@
                         <li>Canada<span style="float: right;">25</span></li>
 
                         <div>
-                             <p>Sustainability scores are produced by a weighted average of 5 metrics: Energy Utiization, Oil Spills, Water Usage, Waste Production, and Greenhouse Emissions.
+                             <p>
+                                Sustainability scores are produced by a weighted average of 5 metrics: Energy Utiization, Oil Spills, Water Usage, Waste Production, and Greenhouse Emissions.
                                 Each metric is calculated as having a score between 0-20 for any particular metric. Here, lower values indicate unsustainability, and higher values indicate sustainability.
                                 From this, the reciprocal of this value is taken, and we are given a decimal value as a score for the metric as a perentage. Utilizing a scientific weighing of sustainability measures
                                 we produce a weighted average for the final sustainability score.                                
@@ -52,7 +53,7 @@
                 </details>
                 <details id="d1" class="location-card" tabindex="0">
                     <summary class = "card">
-                            <h2>Energy</h2>
+                            <h2>Energy Expenditure</h2>
                             <img src="../static/photos/light bulb.png" alt="Snow" class = "clickableImages" onclick="imageClicked('Water')">
                     </summary>
                     <h3>Energy Sustainability Scores (Out of 20)</h3>
@@ -61,13 +62,14 @@
                         <li>Asia Pacific<span style="float: right;">14</span></li>
                         <li>U.S.A.<span style="float: right;">13</span></li>
                         <li>Canada<span style="float: right;">0</span></li>
-                    </ol>
-                    <canvas id="energy"></canvas>
-                    <button class = "moredata" id="generateChartButton">More Data?</button>
+                    
+                    <li style="list-style-type:none;"><canvas class = "pie-graphs" id="energy"></canvas></li>
+                </ol>
+                    
                 </details>
                 <details id="d2" class="location-card" tabindex="0">
                     <summary class = "card">
-                            <h2>Oil Spills</h2>
+                            <h2>Oil Pollution</h2>
                             <img src="../static/photos/oil spills.png" alt="Mountains" class = "clickableImages" onclick="imageClicked('GreenHouseEmissions')">
                     </summary>
                     <h3>Spillage Sustainability Scores (Out of 20)</h3>
@@ -76,13 +78,13 @@
                         <li>Europe / Middle East<span style="float: right;">20</span></li>
                         <li>U.S.A.<span style="float: right;">2</span></li>
                         <li>Canada<span style="float: right;">0</span></li>
-                    </ol>
-                    <canvas id="oilSpills"></canvas>
-                    <button class = "moredata" id="generateChartButton">More Data?</button>
+                    
+                    <li style="list-style-type:none;"><canvas style = "width: 20px " id="oilSpills"></canvas></li>
+                </ol>
                 </details>
                 <details id="d3" class="location-card" tabindex="0">
                     <summary class = "card">
-                            <h2>Water Usage</h2>
+                            <h2>Water Consumption</h2>
                             <img src="../static/photos/water.png" alt="Snow" class = "clickableImages" onclick="imageClicked('Water')">
                     </summary>
                     <h3>Water Sustainability Scores (Out of 20)</h3>
@@ -91,9 +93,9 @@
                         <li>Canada<span style="float: right;">15</span></li>
                         <li>U.S.A.<span style="float: right;">7</span></li>
                         <li>Europe / Middle East<span style="float: right;">0</span></li>
-                    </ol>
-                    <canvas id="water"></canvas>
-                    <button class = "moredata" id="generateChartButton">More Data?</button>
+                    
+                    <li style="list-style-type:none;"><canvas id="water"></canvas></li>
+                </ol>
                 </details>
                 <details id="d4" class="location-card" tabindex="0">
                     <summary class = "card">
@@ -106,9 +108,9 @@
                         <li>Europe / Middle East<span style="float: right;">11</span></li>
                         <li>Canada<span style="float: right;">10</span></li>
                         <li>U.S.A.<span style="float: right;">0</span></li>
-                    </ol>
-                    <canvas id="waste"></canvas>
-                    <button class = "moredata" id="generateChartButton">More Data?</button>
+                    
+                    <li style="list-style-type:none;"><canvas id="waste"></canvas></li>
+                </ol>
                 </details>
                 <details id="d5" class="location-card" tabindex="0">
                     <summary class = "card">
@@ -121,16 +123,12 @@
                         <li>Asia Pacific<span style="float: right;">15</span></li>
                         <li>U.S.A.<span style="float: right;">11</span></li>
                         <li>Canada<span style="float: right;">0</span></li>
-                    </ol>
-                    <canvas id="GreenHouseEmissions" style="width:100%;max-width:700px"></canvas>
-                    <button class = "moredata" id="generateChartButton">More Data?</button>
+                    
+                    <li style="list-style-type:none;"><canvas id="GreenHouseEmissions" style="width:100%;max-width:700px;align-content: center;"></canvas></li>
+                </ol>
                 </details>
             </div>
         </section>
-
-        <div id="map"></div>
-
-
 
             <section  aria-label="Subscribe example">
                 <div class = "emailList" class="container">
