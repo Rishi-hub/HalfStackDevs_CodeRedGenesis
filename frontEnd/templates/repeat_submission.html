@@ -1,45 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
-    <link rel="stylesheet" href="../static/style.css">
-    <title>Sustainability Tracking</title>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            document.querySelectorAll('.location-card').forEach(card => {
-                card.addEventListener('click', function () {
-                    this.classList.toggle('active');
-                });
-            });
-        });
-    </script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+        <link rel="stylesheet" href="../static/style.css">
+        <title>About US</title>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src ="../static/app.js"></script>
+    </head>
 <body>
     <nav class="container-fluid">
-        <ul>
-            <li><strong><a href="/">Home</a></strong></li>
-        </ul>
-        <ul>
-            <li><a href="/about-us">About Us</a></li>
-        </ul>
+
+            <strong><a href="/">Home</a></strong>
+            <img alt="Half Stack Of Pancakes" src = "../static/photos/half stack pancakes.PNG" class = "halfstack" >
     </nav>
     <main class="container">
-        <section aria-label="Subscribe example">
-            <div class="container">
-                <article>
-                    <h2>This Email is already in our mailing list. To remove your email, please fill out the form below:</h2>
-                    <form class="grid" action="/remove-from-mailing-list" method="post"> <!-- /submit-form is localhost -->
-                        <input type="email" id="email" name="email" placeholder="Email Address" aria-label="Email Address" required />
-                        <button type="submit">Unsubscribe</button>
-                    </form>
-                </article>
+        <section id="about">
+            <div class = "about">
+                <h2>The provided email is already in our mailing list. Please complete the form below if you would like to unsubscribe:</h2>
+                <form class="grid" action="/remove-from-mailing-list" method="post"> <!-- /submit-form is localhost -->
+                    <input type="email" id="email" name="email" placeholder="Email Address" aria-label="Email Address" required />
+                    <button type="submit">Unsubscribe</button>
+                </form>
             </div>
         </section>
     </main>
-    <footer class="container">
-        <small><a href="#">Privacy Policy</a> • <a href="#">Terms of Use</a></small>
-    </footer>
 </body>
 </html>
