@@ -1,7 +1,10 @@
-from flask import Flask, request, render_template
+import string
+from flask import Flask, request, render_template, redirect
 import sqlite3
+import random
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = "".join(random.choice(string.ascii_letters + string.digits) for _ in range(100))
 
 DB_path = "../DB/COP_Sustainability.db"
 
@@ -25,7 +28,7 @@ def handle_data():
 
     insert_recipient(first_name, email)
 
-    return 'Data received'
+    return redirect("/")
 
 
 if __name__ == '__main__':
