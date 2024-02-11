@@ -16,7 +16,7 @@
             <li><a style="font-weight: lighter;" href="/">COP Sustainability</a></li>
         </ul>
         <ul>
-            <li><a href="\about-us">About Us</a></li>
+            <li><a href="aboutUs.html">About Us</a></li>
         </ul>
     </nav>
     <main class="container">
@@ -27,11 +27,12 @@
         
         <section id="locations">
             <div class="location-list">
-                <details class="location-card" tabindex="0">
+                <details id="d0" class="location-card" tabindex="0">
                     <summary class = "card">
                             <h2>Sustainability Scores</h2>
                             <img src="../static/photos/cloud.png" alt="Snow" class = "clickableImages" onclick="imageClicked('Water')">
                     </summary>
+                    <h3>Total Sustainability Scores (Out of 100)</h3>
                     <ol class="container">
                         <li>Asia Pacific<span style="float: right;">89</span></li>
                         <li>Europe / Middle East<span style="float: right;">61</span></li>
@@ -49,50 +50,88 @@
                         
                     </ol>
                 </details>
-                <details class="location-card" tabindex="0">
+                <details id="d1" class="location-card" tabindex="0">
                     <summary class = "card">
                             <h2>Energy</h2>
                             <img src="../static/photos/light bulb.png" alt="Snow" class = "clickableImages" onclick="imageClicked('Water')">
                     </summary>
+                    <h3>Energy Sustainability Scores (Out of 20)</h3>
+                    <ol class="container">
+                        <li>Europe / Middle East<span style="float: right;">15</span></li>
+                        <li>Asia Pacific<span style="float: right;">14</span></li>
+                        <li>U.S.A.<span style="float: right;">13</span></li>
+                        <li>Canada<span style="float: right;">0</span></li>
+                    </ol>
                     <canvas id="energy"></canvas>
                     <button class = "moredata" id="generateChartButton">More Data?</button>
                 </details>
-                <details class="location-card" tabindex="0">
+                <details id="d2" class="location-card" tabindex="0">
                     <summary class = "card">
                             <h2>Oil Spills</h2>
                             <img src="../static/photos/oil spills.png" alt="Mountains" class = "clickableImages" onclick="imageClicked('GreenHouseEmissions')">
                     </summary>
+                    <h3>Spillage Sustainability Scores (Out of 20)</h3>
+                    <ol class="container">
+                        <li>Asia Pacific<span style="float: right;">20</span></li>
+                        <li>Europe / Middle East<span style="float: right;">20</span></li>
+                        <li>U.S.A.<span style="float: right;">2</span></li>
+                        <li>Canada<span style="float: right;">0</span></li>
+                    </ol>
                     <canvas id="oilSpills"></canvas>
                     <button class = "moredata" id="generateChartButton">More Data?</button>
                 </details>
-                <details class="location-card" tabindex="0">
-                        <summary class = "card">
-                                <h2>Water Usage</h2>
-                                <img src="../static/photos/water.png" alt="Snow" class = "clickableImages" onclick="imageClicked('Water')">
-                        </summary>
-                        <span style="color:rgb(0, 0, 0);font-size:18px;">Water usage per country</span>
-                        <canvas id="water"></canvas>
-                        <button class = "moredata" id="generateChartButton">More Data?</button>
-                    </details>
-                <!-- Add more locations as needed -->
-                <details class="location-card" tabindex="0">
+                <details id="d3" class="location-card" tabindex="0">
+                    <summary class = "card">
+                            <h2>Water Usage</h2>
+                            <img src="../static/photos/water.png" alt="Snow" class = "clickableImages" onclick="imageClicked('Water')">
+                    </summary>
+                    <h3>Water Sustainability Scores (Out of 20)</h3>
+                    <ol class="container">
+                        <li>Asia Pacific<span style="float: right;">20</span></li>
+                        <li>Canada<span style="float: right;">15</span></li>
+                        <li>U.S.A.<span style="float: right;">7</span></li>
+                        <li>Europe / Middle East<span style="float: right;">0</span></li>
+                    </ol>
+                    <canvas id="water"></canvas>
+                    <button class = "moredata" id="generateChartButton">More Data?</button>
+                </details>
+                <details id="d4" class="location-card" tabindex="0">
                     <summary class = "card">
                             <h2>Waste Production</h2>
                             <img src="../static/photos/recycle.png" alt="Forest" class = "clickableImages" onclick="imageClicked('GreenHouseEmissions')">
                     </summary>
+                    <h3>Waste Sustainability Scores (Out of 20)</h3>
+                    <ol class="container">
+                        <li>Asia Pacific<span style="float: right;">20</span></li>
+                        <li>Europe / Middle East<span style="float: right;">11</span></li>
+                        <li>Canada<span style="float: right;">10</span></li>
+                        <li>U.S.A.<span style="float: right;">0</span></li>
+                    </ol>
                     <canvas id="waste"></canvas>
                     <button class = "moredata" id="generateChartButton">More Data?</button>
                 </details>
-                <details class="location-card" tabindex="0">
+                <details id="d5" class="location-card" tabindex="0">
                     <summary class = "card">
                             <h2>Green House Emissions</h2>
                             <img src="../static/photos/green house emissions.png" alt="Mountains" class = "clickableImages" onclick="imageClicked('GreenHouseEmissions')">
                     </summary>
+                    <h3>GHG Sustainability Scores (Out of 20)</h3>
+                    <ol class="container">
+                        <li>Europe / Middle East<span style="float: right;">16</span></li>
+                        <li>Asia Pacific<span style="float: right;">15</span></li>
+                        <li>U.S.A.<span style="float: right;">11</span></li>
+                        <li>Canada<span style="float: right;">0</span></li>
+                    </ol>
                     <canvas id="GreenHouseEmissions" style="width:100%;max-width:700px"></canvas>
                     <button class = "moredata" id="generateChartButton">More Data?</button>
                 </details>
             </div>
-            </section>
+        </section>
+
+        <div id="map"></div>
+
+
+
             <section  aria-label="Subscribe example">
                 <div class = "emailList" class="container">
                     <article>
