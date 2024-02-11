@@ -13,10 +13,10 @@
 <body>
     <nav class="container-fluid">
         <ul>
-            <li><strong>ConocoPhillips</strong></li>
+            <li><a style="font-weight: lighter;" href="/">COP Sustainability</a></li>
         </ul>
         <ul>
-            <li><a href="aboutUs.html">About Us</a></li>
+            <li><a href="\about-us">About Us</a></li>
         </ul>
     </nav>
     <main class="container">
@@ -31,45 +31,59 @@
             <div class="location-list">
                 <details class="location-card" tabindex="0">
                     <summary class = "card">
-                            <h2>energy</h2>
-                            <img src="../photos/light bulb.jpg" alt="Snow" class = "clickableImages" onclick="imageClicked('Water')">
+                            <h2>Energy</h2>
+                            <img src="../static/photos/light bulb.jpg" alt="Snow" class = "clickableImages" onclick="imageClicked('Water')">
                     </summary>
                     <canvas id="energy" style="width:100%;max-width:700px"></canvas>
-                    <span style="color:rgb(0, 0, 0);font-size:18px;">Acreage: 2 million acres Oil Production: 0.5 million barrels/day Known Oil Reserves: 3 billion barrels Capital Expenditures: $1.2 billion</span>
+                    <button class = "moredata" id="generateChartButton">More Data?</button>
                 </details>
                 <details class="location-card" tabindex="0">
                     <summary class = "card">
                             <h2>Oil Spills</h2>
-                            <img src="../photos/oil spills.jpg" alt="Mountains" class = "clickableImages"onclick="imageClicked('GreenHouseEmissions')">
+                            <img src="../static/photos/oil spills.jpg" alt="Mountains" class = "clickableImages" onclick="imageClicked('GreenHouseEmissions')">
                     </summary>
-                    <span style="color:rgb(0, 0, 0);font-size:18px;">Acreage: 2 million acres Oil Production: 0.5 million barrels/day Known Oil Reserves: 3 billion barrels Capital Expenditures: $1.2 billion</span>
                     <canvas id="oilSpills" style="width:100%;max-width:700px"></canvas>
+                    <button class = "moredata" id="generateChartButton">More Data?</button>
                 </details>
                 <details class="location-card" tabindex="0">
                         <summary class = "card">
                                 <h2>Water Usage</h2>
-                                <img src="../photos/water.png" alt="Snow" class = "clickableImages" onclick="imageClicked('Water')">
+                                <img src="../static/photos/water.png" alt="Snow" class = "clickableImages" onclick="imageClicked('Water')">
                         </summary>
                         <span style="color:rgb(0, 0, 0);font-size:18px;">Water usage per country</span>
                         <canvas id="water" style="width:100%;max-width:700px"></canvas>
+                        <button class = "moredata" id="generateChartButton">More Data?</button>
                     </details>
                 <!-- Add more locations as needed -->
                 <details class="location-card" tabindex="0">
                     <summary class = "card">
                             <h2>Waste Production</h2>
-                            <img src="../photos/recycle.jpg" alt="Forest" class = "clickableImages"onclick="imageClicked('GreenHouseEmissions')">
+                            <img src="../static/photos/recycle.jpg" alt="Forest" class = "clickableImages" onclick="imageClicked('GreenHouseEmissions')">
                     </summary>
-                    <span style="color:rgb(0, 0, 0);font-size:18px;">Acreage: 2 million acres Oil Production: 0.5 million barrels/day Known Oil Reserves: 3 billion barrels Capital Expenditures: $1.2 billion</span>
                     <canvas id="waste" style="width:100%;max-width:700px"></canvas>
+                    <button class = "moredata" id="generateChartButton">More Data?</button>
                 </details>
                 <details class="location-card" tabindex="0">
                     <summary class = "card">
                             <h2>Green House Emissions</h2>
-                            <img src="../photos/green house emissions.jpg" alt="Mountains" class = "clickableImages"onclick="imageClicked('GreenHouseEmissions')">
+                            <img src="../static/photos/green house emissions.jpg" alt="Mountains" class = "clickableImages" onclick="imageClicked('GreenHouseEmissions')">
                     </summary>
-                    <span style="color:rgb(0, 0, 0);font-size:18px;">Acreage: 2 million acres Oil Production: 0.5 million barrels/day Known Oil Reserves: 3 billion barrels Capital Expenditures: $1.2 billion</span>
                     <canvas id="GreenHouseEmissions" style="width:100%;max-width:700px"></canvas>
+                    <button class = "moredata" id="generateChartButton">More Data?</button>
                 </details>
+            </div>
+            </section>
+            <section  aria-label="Subscribe example">
+                <div class = "emailList" class="container">
+                    <article>
+                        <h2>Please join our mailing list to receive regular updates about COP sustainability:</h2>
+                        <form class="grid" action="/submit-form" method="post"> <!-- /submit-form is localhost -->
+                            <input type="text" id="firstname" name="firstname" placeholder="First Name" aria-label="First Name" required />
+                            <input type="email" id="email" name="email" placeholder="Email Address" aria-label="Email Address" required />
+                            <button type="submit">Subscribe</button>
+                        </form>
+                    </article>
+                </div>
             </section>
     </main>
     <footer class="container">

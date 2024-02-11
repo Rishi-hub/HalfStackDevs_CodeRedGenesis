@@ -2,6 +2,29 @@
     --main-color: #FFFDE4;
     --text--color: black;
     --secondary-color: #002366;
+    --font-family: system-ui,-apple-system,"Segoe UI","Roboto","Ubuntu","Cantarell","Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --line-height: 1.5;
+    --font-weight: 400;
+    --font-size: 16px;
+    --border-radius: 0.25rem;
+    --border-width: 1px;
+    --outline-width: 3px;
+    --spacing: 1rem;
+    --typography-spacing-vertical: 1.5rem;
+    --block-spacing-vertical: calc(var(--spacing) * 2);
+    --block-spacing-horizontal: var(--spacing);
+    --grid-spacing-vertical: 0;
+    --grid-spacing-horizontal: var(--spacing);
+    --form-element-spacing-vertical: 0.75rem;
+    --form-element-spacing-horizontal: 1rem;
+    --nav-element-spacing-vertical: 1rem;
+    --nav-element-spacing-horizontal: 0.5rem;
+    --nav-link-spacing-vertical: 0.5rem;
+    --nav-link-spacing-horizontal: 0.5rem;
+    --form-label-font-weight: var(--font-weight);
+    --transition: 0.2s ease-in-out;
+    --modal-overlay-backdrop-filter: blur(0.25rem);
+    --card-box-shadow: 0.0145rem 0.029rem 0.174rem rgba(0, 0, 0, 0.01698),0.0335rem 0.067rem 0.402rem rgba(0, 0, 0, 0.024),0.0625rem 0.125rem 0.75rem rgba(0, 0, 0, 0.03),0.1125rem 0.225rem 1.35rem rgba(0, 0, 0, 0.036),0.2085rem 0.417rem 2.502rem rgba(0, 0, 0, 0.04302),0.5rem 1rem 6rem rgba(0, 0, 0, 0.06),0 0 0 0.0625rem rgba(0, 0, 0, 0.015);
 }
 h2,p,h3{
     justify-content: left;
@@ -14,6 +37,7 @@ body {
 }
 .container {
     color: var(--text--color);
+    box-shadow: var(--card-box-shadow);
 }
 .container-fluid{
     background-color: var(--secondary-color);
@@ -30,8 +54,8 @@ body {
     cursor: pointer;
 }
 .clickableImages{
-    width: 10vw;
-    height:10vh;
+    width: auto;
+    height:11vh;
     text-align: right;
 }
 .dropdown {
@@ -98,8 +122,15 @@ body {
     display: flex;
 }
 
-    .halfstack {
+.halfstack {
         width: 30vw;
         height: 30vh;
         align-self: center;
-    }
+}
+.moredata{
+    background-color: var(--secondary-color);
+    color:var(--main-color)
+}
+article{
+    background-color: var(--main-color);
+}

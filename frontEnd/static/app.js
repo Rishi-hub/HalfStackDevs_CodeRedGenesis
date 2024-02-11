@@ -178,4 +178,37 @@ document.addEventListener('DOMContentLoaded', function () { //This section waits
     }
     }
   });
+
+  document.getElementById('generateChartButton').addEventListener('click', function () {
+    // Generate random data for the chart
+    const labels = ["Combustion Energy", "Imported Electricity","Total Energy"];
+    const data = [[81.33, 58.277, 16.85797016],	[42.285, 198.7499702,
+      5.603133434],	[1.789288,.8,	.9],[7.392421434,
+      86.93313343,	60.066288],[	16.85797016, 42.285,	206.1423916]]
+
+    // Create the chart
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: 'Data',
+                data: data,
+                backgroundColor: 'rgba(54, 162, 235, 0.2)', // Change color as needed
+                borderColor: 'rgba(54, 162, 235, 1)', // Change color as needed
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    });
+});
 });
