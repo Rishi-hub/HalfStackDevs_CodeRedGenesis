@@ -24,10 +24,30 @@ def confirmation_email(email):
     emailing.email(email, subject, body.format(recipient))
 
 
+def goodbye_email(email):
+    subject = "We're sorry to see you go..."
+    body = "Hi {},\n\nYou have successfully unsubscribed from our mailing list, and will no longer receive regular updates regarding the sustainability of COP.\nOur team is very sorry to see you go. You can resubscribe anytime from our website.\n\nThank you for the time you spent supporting our mission,\nCOP Sustainability Tracker Team"
+
+    with sqlite3.connect(DB_path) as conn:
+        c = conn.cursor()
+        c.execute(f"SELECT name FROM EmailList WHERE email = '{email}'")
+
+        recipient = c.fetchall()[0][0]
+
+    emailing.email(email, subject, body.format(recipient))
+
+
 def insert_recipient(first_name, email):
     with sqlite3.connect(DB_path) as conn:
         c = conn.cursor()
         c.execute(f"INSERT INTO EmailList (name, email) VALUES ('{first_name}', '{email}')")
+        conn.commit()
+
+
+def remove_recipient(email):
+    with sqlite3.connect(DB_path) as conn:
+        c = conn.cursor()
+        c.execute(f"DELETE FROM EmailList WHERE email = '{email}'")
         conn.commit()
 
 
@@ -54,6 +74,25 @@ def handle_data():
         return render_template("failed_submission.html")
 
     return render_template("submitted.html")
+
+
+@app.route('/remove_from_mailing_list', methods=['POST'])
+def handle_data():
+    email = request.form['email']
+
+    try:
+        goodbye_email(email)
+    except Exception as e:
+        print(e)
+        return render_template("failed_submission.html")
+
+    try:
+        remove_recipient(email)
+    except Exception as e:
+        print(e)
+        return render_template("failed_submission.html")
+
+    return render_template("successful_unsubscribe.html")
 
 
 if __name__ == '__main__':
