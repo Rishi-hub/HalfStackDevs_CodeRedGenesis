@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>I'm just testing shit</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src ="../static/test.js"></script>
+</head>
+
+
+<body>
+
+    <main class="container">
+        <section id="about">
+            <h2>About ConocoPhillips</h2>
+            <p>Welcome to ConocoPhillips' sustainability tracking page. We are devoted to monitoring and improving the environmental impact of our global operations.</p>
+        </section>
+        
+        
+        <section id="locations">
+            <h2>Sustainability Categories</h2>
+            <div class="location-list">
+                <details class="location-card" tabindex="0">
+                    <summary class = "card">
+                            <h2>energy</h2>
+                            <img src="../photos/light bulb.jpg" alt="Snow" class = "clickableImages" onclick="imageClicked('Water')">
+                    </summary>
+                    <canvas id="energy" style="width:100%;max-width:700px"></canvas>
+                    <span style="color:rgb(0, 0, 0);font-size:18px;">Acreage: 2 million acres Oil Production: 0.5 million barrels/day Known Oil Reserves: 3 billion barrels Capital Expenditures: $1.2 billion</span>
+                </details>
+                </div>
+            </section>
+    </main>
+
+
+</body>
