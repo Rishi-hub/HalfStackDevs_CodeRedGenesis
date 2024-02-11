@@ -68,7 +68,18 @@ body {
     width: 80%;
 }
 .location-card:hover {
-    background-color: #f0f0f0;
+    border-color: #2d2d2d;
+    border-style: solid;
+}
+.location-card:active {
+    background-color: #e3e2cd;
+}
+details[open] {
+    border-style: solid;
+    border-color: #000000;
+}
+details[open] summary h2 {
+    font-style: italic;
 }
 .card {
     padding-top: 10px;
