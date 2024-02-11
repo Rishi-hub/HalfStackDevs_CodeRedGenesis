@@ -68,7 +68,11 @@
         <section aria-label="Subscribe example">
             <div class="container">
                 <article>
-                    <h2>This Email is already in our mailing list. To remove you email, please <a href="/remove-from-mailing-list">HERE</a></h2>
+                    <h2>This Email is already in our mailing list. To remove you email, please fill out the form below:</h2>
+                    <form class="grid" action="/remove-from-mailing-list" method="post"> <!-- /submit-form is localhost -->
+                        <input type="email" id="email" name="email" placeholder="Email Address" aria-label="Email Address" required />
+                        <button type="submit">Unsubscribe</button>
+                    </form>
                 </article>
             </div>
         </section>
