@@ -35,7 +35,6 @@ new Chart("water", {
         display: true,
         text: "Water usage"
       },
-
       tooltips: {
         callbacks: {
           label: function(tooltipItem, data) {
@@ -46,10 +45,10 @@ new Chart("water", {
             var currentValue = dataset.data[tooltipItem.index];
             var percentage = Math.round((currentValue / total) * 100);
             return `${data.labels[tooltipItem.index]}: ${percentage})`;
+            //${currentValue}
           }
         }
     }
-
     }
   });
 

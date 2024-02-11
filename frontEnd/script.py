@@ -59,7 +59,7 @@ def index():
 
 
 @app.route('/submit-form', methods=['POST'])
-def handle_data():
+def submit_form():
     first_name = request.form['firstname']
     email = request.form['email']
 
@@ -78,8 +78,8 @@ def handle_data():
     return render_template("submitted.html")
 
 
-#@app.route('/remove-from-mailing-list', methods=['POST'])
-def handle_data():
+@app.route('/remove-from-mailing-list', methods=['POST'])
+def remove_from_mailing_list():
     email = request.form['email']
 
     try:
