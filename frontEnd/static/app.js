@@ -65,7 +65,7 @@ new Chart("water", {
     options: {
       title: {
         display: true,
-        text: "Water usage"
+        text: "Total Waste"
       },
       tooltips: {
         callbacks: {
