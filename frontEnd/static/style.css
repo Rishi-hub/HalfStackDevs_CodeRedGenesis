@@ -110,6 +110,13 @@ details[open] summary h2 {
 article{
     background-color: var(--main-color);
 }
+.halfstack{
+    width: 10vw;
+    height: 10vh;
+    float: right;
+    position: absolute;
+    align-items: right;
+}
 #map {
     height: 500px;
     width: 100%;
