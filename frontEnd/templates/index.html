@@ -26,7 +26,7 @@
         </section>
         
         
-        <section id="locations">
+        <section id="locations"> 
             <h2>Our Locations</h2>
             <div class="location-list">
                 <details class="location-card" tabindex="0">
@@ -91,8 +91,24 @@
               </div>
             
         </section>
+        <section aria-label="Subscribe example"> <!-- Subscription to the newsletter -->
+            <div class="container">
+                <article>
+                    <hgroup>
+                        <h2>Subscribe to Our Newsletter</h2>
+                        <h3>Stay updated with our latest sustainability reports for ConocoPhillips</h3>
+                    </hgroup>
+                    <form class="grid" action="/submit-form" method="post"> <!-- /submit-form is localhost -->
+                        <input type="text" id="firstname" name="firstname" placeholder="First Name" aria-label="First Name" required />
+                        <input type="email" id="email" name="email" placeholder="Email Address" aria-label="Email Address" required />
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </article>
+            </div>
+        </section>
+
     </main>
-    <footer class="container">
+    <footer class="container"> <!-- Consider removing both of these -->
         <small><a href="#">Privacy Policy</a> • <a href="#">Terms of Use</a></small>
     </footer>
 </body>
