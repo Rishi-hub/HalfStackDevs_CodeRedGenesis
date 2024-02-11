@@ -1,5 +1,5 @@
 body {
-    background-color: #fff; /* Set the background color to white */
+    background-color: #3B874A; /* Set the background color to white */
 }
 .image-container {
     display: flex;
@@ -12,7 +12,11 @@ body {
     margin: 5px;
     cursor: pointer;
 }
-
+.clickableImages{
+    width: 10vw;
+    height:10vh;
+    text-align: right;
+}
 .dropdown {
    
     position: absolute;
