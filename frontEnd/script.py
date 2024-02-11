@@ -19,9 +19,9 @@ def confirmation_email(email):
         c = conn.cursor()
         c.execute(f"SELECT name FROM EmailList WHERE email = '{email}'")
 
-        recipient_row = c.fetchall()
+        recipient = c.fetchall()[0][0]
 
-    emailing.email(email, subject, body.format(recipient_row[0]))
+    emailing.email(email, subject, body.format(recipient))
 
 
 def insert_recipient(first_name, email):
