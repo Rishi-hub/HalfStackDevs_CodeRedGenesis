@@ -2,6 +2,14 @@ runtime: python311  # Specify the runtime environment, e.g., Python 3.9
 env: standard  # Use the standard environment
 instance_class: F1  # Choose an instance class
 
+# # [Optional] Configure handlers
+handlers:
+- url: /.*
+  script: auto
+
+libraries:
+- name: flask
+  version: 3.0.2
 #entry point detection?
 
 # # [Optional] Configure automatic scaling settings
@@ -22,8 +30,3 @@ instance_class: F1  # Choose an instance class
 # # [Optional] Define environment variables
 # env_variables:
 #   ENV_VAR_NAME: "value"
-
-# # [Optional] Configure handlers
-# handlers:
-# - url: /.*
-#   script: auto
