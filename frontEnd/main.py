@@ -149,7 +149,7 @@ def remove_from_mailing_list():
 
 
 if __name__ == '__main__':
-    schedule.every(10).seconds.do(regular_emails)
+    schedule.every(30).seconds.do(regular_emails)
     scheduler_thread = threading.Thread(target=start_scheduler)
     scheduler_thread.start()
     app.run(host="0.0.0.0", port=5000, debug=True)
