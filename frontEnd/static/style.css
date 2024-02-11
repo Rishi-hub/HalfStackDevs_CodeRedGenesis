@@ -35,6 +35,9 @@ h3 {
     padding-right: 50px;
     padding-top: 10px;
 }
+p{
+    font-size: 20px;
+}
 body {
     background-color: var(--main-color);
     color: var(--text--color); /* Set the background color to white */
@@ -44,7 +47,7 @@ body {
     place-items: center;
     padding: 20px;
 }
-.container-fluid{
+.container-fluid, footer{
     background-color: var(--secondary-color);
     width: 100%;
     height: 15vh;
@@ -52,6 +55,7 @@ body {
     display:block;
     margin:0 auto;
     padding:20px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 .clickableImages{
     width: auto;
@@ -76,6 +80,7 @@ body {
     cursor: pointer;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
+
 .location-card ol {
     width: 80%;
 }
@@ -126,7 +131,7 @@ article{
     width: auto;
     height: 10vh;
     float: right;
-
+    padding-right: 20px;
 }
 #map {
     height: 500px;
