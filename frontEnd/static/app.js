@@ -216,11 +216,29 @@ document.addEventListener('DOMContentLoaded', function () { //This section waits
 
 document.addEventListener('DOMContentLoaded', function () {
   let d = [];
+  let canvas = [
+      document.getElementById('energy'),
+      document.getElementById('oilSpills'),
+      document.getElementById('water'),
+      document.getElementById('waste'),
+      document.getElementById('GreenHouseEmissions')
+  ];
+
   for (let i = 0; i < 6; ++i) {
     d[i] = document.getElementById('d' + JSON.stringify(i));
 
     d[i].addEventListener('click', function (event) {
       event.preventDefault();
+
+      let canvasClick = false;
+      for (let j = 0; j < canvas.length; j++) {
+        if (event.target === canvas[j]) {
+          canvasClick = true;
+          break;
+        }
+      }
+      if (canvasClick) return;
+
       if (d[i].open) {
         d[i].removeAttribute('open');
       } else {
