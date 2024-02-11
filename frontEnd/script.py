@@ -3,6 +3,9 @@ from flask import Flask, request, render_template
 import sqlite3
 import random
 import emailing
+import schedule
+import threading
+import time
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = "".join(random.choice(string.ascii_letters + string.digits) for _ in range(100))
@@ -37,6 +40,26 @@ def goodbye_email(email):
         recipient = c.fetchall()[0][0]
 
     emailing.email(email, subject, body.format(recipient))
+
+
+def regular_emails():
+    subject = "Did you know..."
+    body = "Hi {},\n\nDid you know, in 2022 alone, Conico Phillips released 10000 tonnes of hydrocarbons into the atmosphere.\n\nThank you for the time you spent supporting our mission,\nCOP Sustainability Tracker Team"
+
+    with sqlite3.connect(DB_path) as conn:
+        c = conn.cursor()
+        c.execute("SELECT email, name FROM EmailList")
+
+        recipients = c.fetchall()
+
+    for recipient in recipients:
+        emailing.email(recipient[0], subject, body.format(recipient[1]))
+
+
+def start_scheduler():
+    while True:
+        schedule.run_pending()
+        time.sleep(1)  # Adjust this value as needed for accuracy
 
 
 def insert_recipient(first_name, email):
@@ -86,16 +109,19 @@ def remove_from_mailing_list():
         goodbye_email(email)
     except Exception as e:
         print(e)
-        return render_template("failed_submission.html")
+        return render_template("failed_not_in_list.html")
 
     try:
         remove_recipient(email)
     except Exception as e:
         print(e)
-        return render_template("failed_submission.html")
+        return render_template("failed_not_in_list.html")
 
     return render_template("successful_unsubscribe.html")
 
 
 if __name__ == '__main__':
+    schedule.every(10).seconds.do(regular_emails)
+    scheduler_thread = threading.Thread(target=start_scheduler)
+    scheduler_thread.start()
     app.run(host="0.0.0.0", port=5000, debug=True)
